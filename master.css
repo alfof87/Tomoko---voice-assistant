@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+
+}
+#btn{
+  width: 250px;
+  height: 30px;
+  background-color: blue;
+  border-style: none;
+  border-radius: 5px;
+}
+#eye{
+  width: 700px;
+  height: 500px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+#eye img{
+  width: 100%;
+}
+#result{
+  color: blue;
+  font-family: monospace;
+  margin-top: 20px;
+}
+.fa-microphone{
+  font-size: 25px;
+}
+#btnMeteo{
+  
+}
