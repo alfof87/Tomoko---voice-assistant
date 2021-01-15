@@ -37,11 +37,17 @@ function addEventListener(){
     if (text == 'Che ore sono') {
       speech.text = 'sono le' + time;
     }
+    else if (text == 'Raccontami una barzelletta') {
+      speech.text = 'Un uomo entra in un caffe. Ma nota che manca l’accento, così con un pennarello gigante aggiunge l’accento mancante. E se ne va… Caffè corretto.';
+    }
     else if (text == 'chi sei') {
       speech.text = 'sono Tomòco, il tuo assistente personale';
     }
     else if (text == 'Che giorno è oggi') {
       speech.text = date;
+    }
+    else if (text == 'Come stai') {
+      speech.text = 'bene, grazie';
     }
     else if (text == 'Buongiorno') {
       speech.text = 'salve';
@@ -49,15 +55,10 @@ function addEventListener(){
     else if (text == 'ciao' || 'ciao tomoko') {
       speech.text = 'salve';
     }
-    else if (text == 'Come stai') {
-      speech.text = 'bene, grazie';
-    }
-    else if (text == 'Raccontami una barzelletta') {
-      speech.text = 'Un uomo entra in un caffe. Ma nota che manca l’accento, così con un pennarello gigante aggiunge l’accento mancante. E se ne va… Caffè corretto.';
-    }
-    else if (text == 'meteo') {
-      getMeteo();
-    }
+
+    // else if (text == 'meteo') {
+    //   // speech.text = getMeteo();
+    // }
     window.speechSynthesis.speak(speech);
   }
 
@@ -79,10 +80,10 @@ function getMeteo(){
     success: function(data){
       console.log("OK");
       var results = data["weather"][0]["description"];
-      var temp = data["main"]["temp"] + " °C";
+      var temp = data["main"]["temp"] + "°C";
       var name = data["name"];
       console.log(name, temp, results);
-      $("#result").append(name, " ", temp, " ", results);
+      $("#result").append(name, ", ", temp, ", ", results);
     },
     error: function(){
       console.log("ERROR");
