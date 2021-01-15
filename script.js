@@ -68,7 +68,7 @@ function getMeteo(){
   var query = $("#result").val();
   var apiKey = "20a3c0a3f2c9eaac2135061bbb41199b";
   // var city = $("#input").val();
-  var city = "Sassuolo";
+  var city = "Rome";
 
   $.ajax({
     url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=20a3c0a3f2c9eaac2135061bbb41199b",
