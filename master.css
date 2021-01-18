@@ -9,11 +9,18 @@ body{
   justify-content: center;
 
 }
+/* .btnBox{
+  background-color: black;
+  border-style: 2px solid blue;
+  border-color: blue;
+  border-radius: 5px;
+} */
 #btn{
   width: 250px;
-  height: 30px;
-  background-color: blue;
-  border-style: none;
+  height: 40px;
+  background-color: black;
+  border-style: 2px solid blue;
+  border-color: blue;
   border-radius: 5px;
 }
 #eye{
@@ -36,13 +43,16 @@ body{
 }
 .fa-microphone{
   font-size: 25px;
+  color: blue;
 }
 #input{
   width: 80%;
+  height: 30px;
 }
 #btnMeteo{
   margin-left: 5%;
   width: 20%;
+  height: 30px;
 }
 #meteoBox{
   width: 250px;
