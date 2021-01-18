@@ -37,6 +37,16 @@ body{
 .fa-microphone{
   font-size: 25px;
 }
+#input{
+  width: 80%;
+}
 #btnMeteo{
-  
+  margin-left: 5%;
+  width: 20%;
+}
+#meteoBox{
+  width: 250px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }

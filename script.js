@@ -37,6 +37,14 @@ function addEventListener(){
     if (text == 'Che ore sono') {
       speech.text = 'sono le' + time;
     }
+    else if (text == 'Apri Google') {
+      speech.text = 'subito';
+      window.open("http://www.google.com/");
+    }
+    else if (text == 'Apri Facebook') {
+      speech.text = 'subito';
+      window.open("https://www.facebook.com/");
+    }
     else if (text == 'Raccontami una barzelletta') {
       speech.text = 'Un uomo entra in un caffe. Ma nota che manca l’accento, così con un pennarello gigante aggiunge l’accento mancante. E se ne va… Caffè corretto.';
     }
@@ -56,9 +64,6 @@ function addEventListener(){
       speech.text = 'salve';
     }
 
-    // else if (text == 'meteo') {
-    //   // speech.text = getMeteo();
-    // }
     window.speechSynthesis.speak(speech);
   }
 
@@ -67,28 +72,33 @@ function addEventListener(){
 function getMeteo(){
   var query = $("#result").val();
   var apiKey = "20a3c0a3f2c9eaac2135061bbb41199b";
-  // var city = $("#input").val();
-  var city = "Rome";
 
-  $.ajax({
-    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=20a3c0a3f2c9eaac2135061bbb41199b",
-    method: "GET",
-    data: {
-      api_key: "20a3c0a3f2c9eaac2135061bbb41199b",
-      query: query
-    },
-    success: function(data){
-      console.log("OK");
-      var results = data["weather"][0]["description"];
-      var temp = data["main"]["temp"] + "°C";
-      var name = data["name"];
-      console.log(name, temp, results);
-      $("#result").append(name, ", ", temp, ", ", results);
-    },
-    error: function(){
-      console.log("ERROR");
-    }
-  });
+  var btnMeteo = $('#btnMeteo');
+  // var city = "Rome";
+  btnMeteo.click(function(){
+    var city = $("#input").val();
+    $.ajax({
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&appid=20a3c0a3f2c9eaac2135061bbb41199b",
+      method: "GET",
+      data: {
+        api_key: "20a3c0a3f2c9eaac2135061bbb41199b",
+        query: query
+      },
+      success: function(data){
+        console.log("OK");
+        var results = data["weather"][0]["description"];
+        var temp = data["main"]["temp"] + "°C";
+        var name = data["name"];
+        console.log(name, temp, results);
+        $("#result").empty();
+        $("#result").append(name, ", ", temp, ", ", results);
+      },
+      error: function(){
+        console.log("ERROR");
+      }
+    });
+  })
+
 }
 
 
