@@ -19,9 +19,14 @@ body{
   width: 250px;
   height: 40px;
   background-color: black;
-  border-style: 2px solid blue;
   border-color: blue;
-  border-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-image: url("./btn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 #eye{
   width: 700px;
@@ -43,20 +48,72 @@ body{
 }
 .fa-microphone{
   font-size: 25px;
-  color: blue;
+  color: #87CEFA;
 }
 #input{
   width: 80%;
-  height: 30px;
+  height: 35px;
+  border-top-right-radius: 25px;
+  border-style: none;
+  background-color: #87CEFA;
+  font-size: 25px;
+}
+h3{
+  font-size: 30px;
 }
 #btnMeteo{
   margin-left: 5%;
   width: 20%;
-  height: 30px;
+  height: 35px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #1E90FF;
+  cursor: pointer;
+}
+.fa-cloud-sun{
+  font-size: 30px;
 }
 #meteoBox{
   width: 250px;
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  #eye{
+    height: 1200px;
+    margin-left: 190px;
+  }
+  #eye img{
+    width: 1200px;
+  }
+  #btn{
+    width: 500px;
+    height: 100px;
+    margin-top: 80px;
+  }
+  .fa-microphone{
+    font-size: 50px;
+  }
+  .fa-cloud-sun{
+    font-size: 40px;
+  }
+  #meteoBox{
+    width: 500px;
+    margin-top: 120px;
+  }
+  #input{
+    width: 80%;
+    height: 50px;
+    font-size: 35px;
+  }
+  #btnMeteo{
+    margin-left: 5%;
+    width: 20%;
+    height: 50px;
+    font-size: 30px;
+  }
+  h3{
+    font-size: 50px;
+  }
 }

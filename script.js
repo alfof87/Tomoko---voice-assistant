@@ -29,13 +29,14 @@ function addEventListener(){
 
 
 
-    var time = moment().format('h:mm');
+    var timeH = moment().format('h');
+    var timeM = moment().format('mm');
     var date = moment().format('dddd D MMMM YYYY');
 
 
 
     if (text == 'Che ore sono') {
-      speech.text = 'sono le' + time;
+      speech.text = 'sono le' + timeH + "e" + timeM;
     }
     else if (text == 'Apri Google') {
       speech.text = 'subito';
@@ -48,8 +49,8 @@ function addEventListener(){
     else if (text == 'Raccontami una barzelletta') {
       speech.text = 'Un uomo entra in un caffe. Ma nota che manca l’accento, così con un pennarello gigante aggiunge l’accento mancante. E se ne va… Caffè corretto.';
     }
-    else if (text == 'chi sei') {
-      speech.text = 'sono Tomòco, il tuo assistente personale';
+    else if (text == 'chi sei' || 'presentati') {
+      speech.text = 'sono Tomòco, il suo assistente personale';
     }
     else if (text == 'Che giorno è oggi') {
       speech.text = date;
