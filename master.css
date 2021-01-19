@@ -27,6 +27,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  outline:none;
 }
 #eye{
   width: 700px;
@@ -57,6 +58,7 @@ body{
   border-style: none;
   background-color: #87CEFA;
   font-size: 25px;
+  outline:none;
 }
 h3{
   font-size: 30px;
@@ -69,6 +71,7 @@ h3{
   border-style: none;
   background-color: #1E90FF;
   cursor: pointer;
+  outline:none;
 }
 .fa-cloud-sun{
   font-size: 30px;
